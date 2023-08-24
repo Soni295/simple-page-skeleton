@@ -1,0 +1,22 @@
+{
+  "name": "mvc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "minify": "uglifyjs bundle.js -o bundle.min.js",
+    "dev": "tsc --watch ./src/index.ts",
+    "bundle": "rollup dist/index.js --format iife --name \"myBundle\" --file bundle.js",
+    "build": "npm run tsc && npm run bundle && npm run minify",
+		"clear":"rimraf dist bundle.js a.min.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.1.6",
+    "rollup": "^3.28.1",
+    "uglify-js": "^3.17.4"
+  }
+}
